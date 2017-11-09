@@ -2,10 +2,10 @@ FROM node:latest
 
 # Install Ruby Tools
 RUN apt-get update && apt-get install -y ruby ruby-dev && \
-    gem install sass bundler --no-user-install
+    gem install bundler --no-user-install
 
 # Install Global Node.js Tools
-RUN npm install -g gulp
+RUN npm install node-sass@3.5.3 gulp
 
 # Expose port for development
 EXPOSE 1234
